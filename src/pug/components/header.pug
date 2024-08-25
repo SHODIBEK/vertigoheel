@@ -1,0 +1,28 @@
+header.header
+  .container
+    .header__wrapper
+      a.header__logo.logo(href="/")
+        img.logo__image(src="./logo.svg" alt='Жизнь без головокружения')
+
+      nav.header__menu
+        .header__navs
+          each object in data.header.menu
+            a.header__link(
+              href=object.url
+            )
+              != object.name
+
+        a.header__menu-profile.header__profile(href="#")
+          +svg('profile').header__profile-icon
+          span
+            | Войти в личный кабинет
+
+      a.header__profile(href="#")
+        +svg('profile').header__profile-icon
+        span
+          | Войти в личный кабинет
+
+      button.header__burger.js-burger(type="button")
+        span
+        span
+        span

@@ -1,0 +1,57 @@
+include ../components/hero
+section.cases.cases--bg
+  .container
+    h2.cases__title.title
+      | Обучающий курс включает в себя различные форматы материалов с участием лидеров мнений – неврологов и отоларингологов:
+    .cases__row.row
+      each object in data.home.cases
+        .col-12.col-md-6.col-lg-4
+          +cases(object)
+      .col-12.col-md-6.col-lg-4.order-first.order-md-last
+        .cases__block
+          | Вы получите исчерпывающую и актуальную информацию о возможностях эффективного лечения головокружения у различных групп пациентов, в том числе с сопутствующей патологией.
+section.disease
+  .container
+    .disease__row.row
+      .col-12.col-lg-8
+        h2.disease__title.title
+          | Головокружение (вертиго) —
+        p.disease__text.base-text
+          | — один из наиболее частых симптомов, с которыми пациенты обращаются к врачу, возникающий почти у трети людей в возрасте старше 60 лет [1]. Оно проявляется ощущением вращения, нарушениями равновесия,  походки и ориентации в пространстве.
+        h3.disease__subtitle.medium-text
+          | Головокружением страдают [1-3]:
+        .disease-diagram
+          img.disease-diagram__image(src="./images/content/diagram.png" alt="diagram")
+          .disease-diagram__row
+            .disease-diagram__block
+              .disease-diagram__count
+                | 15-35%
+              .disease-diagram__text
+                | людей в течение <br>жизни
+            .disease-diagram__block
+              .disease-diagram__count
+                | 50%
+              .disease-diagram__text
+                | в возрасте от 80 лет и старше
+          .disease-diagram__row
+            .disease-diagram__block
+              .disease-diagram__count
+                | 20%
+              .disease-diagram__text
+                | в возрасте 60-70 лет
+            .disease-diagram__block
+              .disease-diagram__count
+                | 30%
+              .disease-diagram__text
+                | в возрасте 70-80 лет
+      .col-12.col-lg-4
+        .disease-block
+          h3.disease-block__title
+            | Головокружение снижает качество жизни [1, 3, 4]:
+          ul.disease-block__lists
+            li.disease-block__list
+              | У большинства пациентов с головокружением заболевание существенно влияет на повседневную жизнь.
+            li.disease-block__list
+              | У людей с вестибулярным и невестибулярным головокружением значительно снижено качество жизни, связанное со здоровьем.
+            li.disease-block__list
+              | Головокружение у пожилых считают предрасполагающим фактором падения — основной причины внезапной смерти в возрасте старше 65 лет.

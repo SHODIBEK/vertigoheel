@@ -1,0 +1,57 @@
+.hero {
+	position: relative;
+	padding: rem(150) 0 rem(32);
+	background: url("../images/content/hero-bg.png") no-repeat top center /
+		cover;
+
+	@include laptop {
+		padding-top: rem(230);
+		padding-bottom: rem(64);
+	}
+
+	&--index {
+		padding-bottom: rem(94);
+		@include laptop {
+			padding-bottom: rem(134);
+		}
+	}
+
+	&__wrapper {
+		max-width: rem(392);
+		@include laptop {
+		}
+	}
+
+	&__subtitle {
+		margin: 0;
+		font-weight: 700;
+		font-size: rem(16);
+		line-height: 130%;
+		color: #000;
+
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+		}
+	}
+
+	&__title {
+		font-weight: 400;
+		font-size: rem(16);
+		line-height: 130%;
+		color: #000;
+	}
+
+	&__logo {
+		display: block;
+		width: 300px;
+		height: auto;
+
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+		}
+
+		@include laptop {
+			width: 393px;
+		}
+	}
+}

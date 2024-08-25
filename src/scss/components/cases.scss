@@ -1,0 +1,90 @@
+.cases {
+	margin-top: rem(-30);
+	margin-bottom: rem(32);
+	padding: rem(32) 0;
+	position: relative;
+	border-radius: rem(32);
+
+	@include tablet {
+		margin-top: rem(-70);
+		padding: rem(64) 0;
+		border-radius: rem(64);
+	}
+
+	&--bg {
+		background: url("../images/content/cases-bg.jpg") no-repeat center /
+			cover;
+	}
+
+	&__title {
+		color: #fff;
+	}
+
+	&__row {
+		--gutter-x: 35px;
+		--gutter-y: 32px;
+	}
+
+	&__block {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: rem(16);
+		line-height: 150%;
+		color: #fff;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&-block {
+		padding: rem(32);
+		width: 100%;
+		height: 100%;
+		border-radius: rem(32);
+		border: 2px solid #fff;
+		background-color: rgba(255, 255, 255, 0.3);
+		box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.06);
+		display: flex;
+		flex-direction: column;
+
+		&__header {
+			margin-bottom: rem(32);
+		}
+
+		&__icon {
+			margin-bottom: rem(16);
+			width: rem(48);
+			height: rem(48);
+			display: inline-block;
+		}
+
+		&__title {
+			margin: 0;
+			font-weight: 700;
+			font-size: rem(24);
+			line-height: 100%;
+			color: #000;
+
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+		}
+
+		&__desc {
+			margin: 0;
+			font-weight: 500;
+			font-size: rem(16);
+			line-height: 150%;
+			color: #fff;
+
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+		}
+
+		&__footer {
+			margin-top: auto;
+		}
+	}
+}

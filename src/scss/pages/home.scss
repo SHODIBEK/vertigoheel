@@ -1,0 +1,117 @@
+.disease {
+	padding: rem(32) 0px;
+
+	&__title {
+		color: var(--primary-color);
+	}
+
+	&__row {
+		--gutter-x: 39px;
+		--gutter-y: 32px;
+	}
+
+	&-diagram {
+		padding: rem(40) 0 rem(80);
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		gap: rem(50);
+
+		&__image {
+			position: absolute;
+			top: rem(-50);
+			left: 0;
+			right: 0;
+			bottom: 0;
+			max-width: 300px;
+			margin: auto;
+
+			@include tablet {
+				top: 0;
+				max-width: 529px;
+			}
+		}
+
+		&__block {
+			max-width: 197px;
+			color: var(--primary-color);
+		}
+
+		&__row {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: rem(200);
+			z-index: 1;
+
+			@include tablet {
+				gap: rem(118);
+			}
+		}
+
+		&__count {
+			margin: 0;
+			font-weight: 800;
+			font-size: rem(20);
+			line-height: 130%;
+
+			@include tablet {
+				font-size: rem(30);
+			}
+		}
+
+		&__text {
+			margin: 0;
+			font-weight: 700;
+			font-size: rem(14);
+			line-height: 133%;
+
+			@include tablet {
+				font-size: rem(18);
+			}
+		}
+	}
+
+	&-block {
+		padding: rem(32);
+		background: #fff;
+		border-radius: rem(32);
+		box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.06);
+
+		@include laptop {
+			padding: rem(64) rem(32);
+		}
+
+		&__title {
+			margin: 0;
+			font-weight: 700;
+			font-size: rem(18);
+			line-height: 133%;
+			color: #000;
+
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+		}
+
+		&__lists {
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+		}
+
+		&__list {
+			margin-left: 30px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 150%;
+			color: #000;
+			list-style-type: disc;
+
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+}

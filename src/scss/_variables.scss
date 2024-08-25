@@ -1,0 +1,46 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// COLORS
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #eee;
+
+// FONTS
+// stylelint-disable-next-line
+$font-primary: -apple-system, blinkmacsystemfont, "PT Sans", roboto, oxygen,
+	ubuntu, cantarell, "Helvetica Neue", sans-serif;
+$font-secondary: "Yanone Kaffeesatz", sans-serif;
+
+$html-font-size: 16px;
+
+// EASING TRANSITIONS
+$duration-normal: 0.3s;
+$easing-back-out: cubic-bezier(
+	0.25,
+	0.74,
+	0.22,
+	1.1
+); // http://cubic-bezier.com/#.25,.74,.22,1.1
+$easing-back-in: cubic-bezier(
+	0.47,
+	-0.1,
+	0.5,
+	-0.06
+); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
+$easing-out: ease-out;
+$easing-in: ease-in;
+
+// Settings
+$desktop: 1140;
+$desktop-xl: 1700;
+$laptop: 1072;
+$tablet: 768;
+$mobile: 360;
+$desktop-vh: 750;
+
+:root {
+	--font-family: -apple-system, blinkmacsystemfont, "Inter", roboto, oxygen,
+		ubuntu, cantarell, "Helvetica Neue", sans-serif;
+	--primary-color: hsl(153, 100%, 26%);
+	--midnight-color: hsl(240, 5%, 24%);
+}

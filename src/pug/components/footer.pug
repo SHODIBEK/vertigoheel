@@ -1,0 +1,23 @@
+footer.footer
+  .container
+    .footer__wrapper
+      a.footer__logo(href="/")
+        | -Heel
+
+      .footer__block
+        .footer__col
+          nav.footer__nav
+            each object in data.header.menu
+              a.footer__link(
+                href=object.url
+              )
+                != object.name
+
+        .footer__col
+          .footer__text
+            | Сайт предназначен для 
+            br
+            | сотрудников здравоохранения
+          .footer__copyright
+            | Heel &copy;&nbsp;
+            span(data-actual-year)
