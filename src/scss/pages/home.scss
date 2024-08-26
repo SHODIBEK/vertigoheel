@@ -114,4 +114,285 @@
 			}
 		}
 	}
+
+	&-static {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: rem(16);
+
+		&:not(:last-child) {
+			margin-bottom: rem(32);
+		}
+
+		@include laptop {
+			padding: 0 rem(32);
+		}
+
+		&__item {
+			width: 100%;
+			max-width: 50%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			@include tablet {
+				max-width: 20%;
+			}
+
+			@include laptop {
+				padding: 0 rem(33);
+				max-width: 195px;
+			}
+		}
+
+		&__rounded {
+			margin-bottom: rem(19);
+			width: rem(129);
+			height: rem(129);
+			font-weight: 800;
+			font-size: rem(30);
+			line-height: 130%;
+			text-align: center;
+			color: #fff;
+			border-radius: 50%;
+			background: radial-gradient(
+				67.04% 67.04% at 39.92% 33.72%,
+				rgb(36, 178, 115) 0%,
+				rgb(0, 135, 75) 100%
+			);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&--30 {
+				opacity: 0.3;
+			}
+
+			&--70 {
+				opacity: 0.7;
+			}
+		}
+
+		&__title {
+			margin: 0;
+			font-weight: 500;
+			font-size: rem(16);
+			line-height: 150%;
+			text-align: center;
+			color: #000;
+		}
+	}
+}
+
+.ingredients {
+	padding: rem(32) 0;
+	background-color: #fff;
+
+	@include tablet {
+		padding: rem(64) 0;
+	}
+
+	&__row {
+		--gutter-x: 50px;
+		--gutter-y: 32px;
+	}
+
+	&-block {
+		padding: rem(16);
+		border-radius: rem(16);
+		border: 2px solid var(--primary-color);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: rem(16);
+
+		&:not(:last-child) {
+			margin-bottom: rem(32);
+		}
+
+		@include tablet {
+			padding: rem(32);
+			border-radius: rem(32);
+			flex-direction: row;
+		}
+
+		&__image {
+			display: inline-block;
+			width: 100%;
+			max-width: 121px;
+			flex-shrink: 0;
+		}
+
+		&__content {
+			text-align: center;
+
+			@include tablet {
+				text-align: left;
+			}
+		}
+
+		&__title {
+			margin-top: 0;
+			margin-bottom: rem(16);
+			font-weight: 700;
+			font-size: rem(18);
+			line-height: 133%;
+			color: var(--primary-color);
+		}
+
+		&__text {
+			margin: 0;
+			font-weight: 400;
+			font-size: rem(16);
+			line-height: 150%;
+			color: #000;
+
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+
+	&-aside {
+		&__title {
+			margin-top: 0;
+			margin-bottom: rem(32);
+			font-weight: 700;
+			font-size: rem(16);
+			line-height: 150%;
+			text-align: center;
+			color: var(--primary-color);
+		}
+
+		&__items {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: rem(16);
+
+			@include tablet {
+				grid-template-columns: repeat(4, 1fr);
+			}
+
+			@include laptop {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+		}
+
+		&__image {
+			margin-bottom: rem(8);
+			width: rem(85);
+			height: rem(85);
+			border: 2px solid var(--primary-color);
+			border-radius: 50%;
+			object-fit: contain;
+			object-position: center;
+		}
+
+		&__name {
+			font-size: rem(16);
+			line-height: 150%;
+			text-align: center;
+			color: #000;
+
+			strong {
+				display: block;
+			}
+		}
+	}
+}
+
+.about {
+	margin-bottom: rem(32);
+	padding: rem(32) 0;
+	color: #fff;
+	border-radius: 0 0 rem(30) rem(30);
+	background-color: var(--primary-color);
+
+	@include tablet {
+		padding: rem(64) 0;
+		border-radius: 0 0 rem(60) rem(60);
+	}
+
+	&__header {
+		margin-bottom: rem(32);
+	}
+
+	&__block {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: rem(32);
+
+		@include tablet {
+			flex-direction: row;
+		}
+
+		&-image {
+			display: inline-block;
+			width: 100%;
+			max-width: 206px;
+			flex-shrink: 0;
+		}
+
+		&-content {
+			padding: rem(16);
+			font-weight: 500;
+			font-size: rem(16);
+			line-height: 150%;
+			color: #fff;
+			border-radius: rem(16);
+			border: 2px solid #fff;
+
+			@include tablet {
+				padding: rem(32);
+				border-radius: rem(32);
+			}
+		}
+	}
+
+	&__text {
+		color: #fff;
+	}
+}
+
+.sources {
+	margin: rem(32) 0;
+	padding: rem(16) 0px;
+
+	&__content > *:not(:last-child) {
+		margin-bottom: rem(16);
+	}
+
+	p {
+		margin: 0;
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: rem(12);
+		line-height: 142%;
+		color: rgba(0, 0, 0, 0.35);
+
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+	}
+
+	ul {
+		margin-left: rem(15);
+
+		li {
+			list-style-type: numeric;
+			font-family: var(--font-family);
+			font-weight: 500;
+			font-size: rem(12);
+			line-height: 142%;
+			color: rgba(0, 0, 0, 0.35);
+		}
+	}
 }

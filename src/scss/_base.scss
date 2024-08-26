@@ -182,6 +182,45 @@ button {
 	}
 }
 
+.main-blockquote {
+	margin: 0;
+	padding: rem(77) rem(16) rem(16) rem(16);
+	font-weight: 500;
+	font-size: rem(16);
+	line-height: 150%;
+	color: #000;
+	border-radius: rem(16);
+	border: 2px solid var(--primary-color);
+	position: relative;
+
+	&:not(:last-child) {
+		margin-bottom: rem(32);
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: rem(16);
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: rem(45);
+		height: rem(45);
+		background: url("../images/icons/info.svg") no-repeat center;
+
+		@include tablet {
+			top: rem(32);
+			right: rem(32);
+			left: unset;
+		}
+	}
+
+	@include tablet {
+		padding: rem(32) rem(87) rem(32) rem(32);
+		border-radius: rem(32);
+	}
+}
+
 .primary-text {
 	color: var(--primary-color) !important;
 }

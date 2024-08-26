@@ -55,3 +55,87 @@ section.disease
               | У людей с вестибулярным и невестибулярным головокружением значительно снижено качество жизни, связанное со здоровьем.
             li.disease-block__list
               | Головокружение у пожилых считают предрасполагающим фактором падения — основной причины внезапной смерти в возрасте старше 65 лет.
+      .col-12
+        blockquote.main-blockquote
+          | Вертиго само по себе не является нозологической единицей, а включает симптомы различной этиологии и патогенеза. Дифференциальная диагностика направлена на оценку типа головокружения, длительности приступов, пусковых факторов и сопутствующих заболеваний, и включает вестибулярное и неврологическое обследование [5].
+        p.base-text
+          | Зачастую, не представляется возможным сразу установить причину головокружения.  Вертигохель®, являясь многокомпонентным лекарственным средством, позволяет воздействовать на головокружения различного происхождения, облегчая врачу терапевтическую задачу.
+        h3.medium-text
+          | Распределение диагноза «вертиго» у пациентов, посетивших врачей общей практики в связи с <br>головокружением [8]
+        .disease-static
+          each static in data.home.statics
+            .disease-static__item
+              .disease-static__rounded(class=(static.modifier != null) ? `disease-static__rounded--${static.modifier}` : '')!=static.procent
+              .disease-static__title!=static.title
+section.ingredients
+  .container
+    .ingredients__row.row
+      .col-12.col-lg-8
+        p.ingredients__text.base-text
+          | Нарушенный кровоток в мелких кровеносных сосудах способствует развитию головокружения и осложняет течение таких заболеваний как: артериальная гипертония, ишемическая болезнь сердца, сахарный диабет и др. Регуляция микроциркуляции основана на процессах вазодилатации и вазоконстрикции.
+        p.ingredients__text.base-text
+          | Исследование механизма действия препарата Вертигохель® позволяет сделать вывод о многоцелевой эффективности: расширение мелких кровеносных сосудов приводит к улучшению микроциркуляции. Вертигохель® сопоставим по терапевтической эффективности со стандартными лекарственными препаратами для уменьшения частоты, продолжительности и интенсивности приступов головокружения [9-14].
+        .ingredients-block
+          img.ingredients-block__image(src="./images/content/ingredients-1.png" alt="Многоцелевое действие" loading="lazy")
+          .ingredients-block__content
+            .ingredients-block__title
+              | Многоцелевое действие
+            .ingredients-block__text
+              | Улучшает вазодилатацию, подавляет вазоконстрикцию
+        .ingredients-block
+          img.ingredients-block__image(src="./images/content/ingredients-2.png" alt="Многокомпонентный" loading="lazy")
+          .ingredients-block__content
+            .ingredients-block__title
+              | Многокомпонентный
+            .ingredients-block__text
+              | Лекарственный препарат разработан для воздействия на различные аспекты головокружения
+      .col-12.col-lg-4
+        .ingredients-aside
+          h3.ingredients-aside__title
+            | АКТИВНЫЕ ИНГРЕДИЕНТЫ:
+          ul.ingredients-aside__items
+            each item in data.home.aside
+              li.ingredients-aside__item
+                img.ingredients-aside__image(
+                  src=`./images/content/${item.image}.png`, 
+                  alt!=item.title 
+                  loading="lazy"
+                )
+                .ingredients-aside__name
+                  strong!=item.title
+                  | #{item.desc}
+section.about
+  .container
+    .about__header
+      .about__block
+        img.about__block-image(src="./images/icons/papper.png" alt="papper" loading="lazy")
+        .about__block-content
+          | По итогам обучающего проекта 
+          strong 
+            | «Жизнь без головокружения»
+          | вы сможете получить международный сертификат от 
+          strong Royal AustralasianCollege of Physicians (RACP). 
+          | Для этого необходимо изучать материалы курса и зарабатывать баллы.
+    .about__footer
+      p.about__text.base-text
+        | RACP отвечает за подготовку специалистов по широкому спектру нозологий, через официальные учебные программы, включающие мероприятия, конференции, тренинги и семинары по повышению квалификации. Колледж регулярно <br>разрабатывает передовые и инновационные методики оказания специализированной медицинской помощи.
+section.sources
+  .container
+    .sources__content
+      p
+        | Список источников:
+      ul
+        li Fernandez, L., Breinbauer, H.A., Delano P.H. (2015). Vertigo and dizziness in the elderly. *Frontiers in Neurology*, 6:1–6.
+        li Sloane, P.D., et al. (2001). Dizziness: state of the science. *Annals of Internal Medicine*, 134(9):823–32.
+        li Neuhauser, H.K., et al. (2008). Burden of dizziness and vertigo in the community. *Archives of Internal Medicine*, 168(19):2118–2124.
+        li Neuhauser, H.K. (2009). Epidemiologie von Schwindelerkrankungen. *Nervenarzt*, 80(8):887–894.
+        li Lempert, T. (2005). Schwindelattacken: Differenzialdiagnose und Therapie. *Fortschritte der Neurologie Psychiatrie*, 73(10):605–620.
+        li Abholz, H.-H. (2007). Schwindel – Diagnostik und Therapie. *ZFA - Zeitschrift für Allgemeinmedizin*, 83(9):373–386.
+        li Antonini-Revaz, S., Guyot, J., Stalder, H. (2004). Schwindel. *Primary Care*, 4(45):899–904.
+        li Kruschinski, C., et al. (2008). Frequency of dizziness-related diagnoses and prescriptions in a general practice database. [In German]. *Zeitschrift für Evidenz, Fortbildung und Qualität im Gesundheitswesen*, 102(5):313–9.
+        li Klopp, R., Niemer, W., Weiser, M. (2005). Microcirculatory effects of a homeopathic preparation in patients with mild vertigo: an intravital microscopic study. *Microvascular Research*, 69(1-2):10–16.
+        li Weiser, M., Strösser, W., Klein, P. (1998). Homeopathic vs conventional treatment of vertigo: a randomized double-blind controlled clinical study. *Archives of Otolaryngology Head Neck Surgery*, 124(8):879–885.
+        li Weiser, M., Strösser, W. (2000). Vergleichsstudie Homöopathikum vs. Betahistin: Behandlung des Schwindels. *Allgemeinarzt*, 22(13):962–964.
+        li Issing, W., Klein, P., Weiser, M. (2005). The homeopathic preparation Vertigoheel® versus Ginkgo biloba in the treatment of vertigo in an elderly population: a double-blinded, randomized, controlled clinical trial. *Journal of Alternative and Complementary Medicine*, 11(1):155–160.
+        li Wolschner, U., et al. (2001). Behandlung des Schwindels mit einem modernen Homöopathikum: Ergebnisse einer referenzkontrollierten Kohortenstudie. *Biologische Medizin*, 30(4):184–190.
+        li Schneider, B., Klein, P., Weiser, M. (2005). Treatment of vertigo with a homeopathic complex remedy compared with usual treatments: a meta-analysis of clinical trials. *Arzneimittelforschung*, 55(1):23–29.

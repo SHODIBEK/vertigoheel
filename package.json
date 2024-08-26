@@ -3,9 +3,11 @@
 	"version": "3.0.4",
 	"description": "Шаблон для разработки сайтов",
 	"repository": "ninelines-team/ninelines-template",
+	"homepage": "https://shodibek.github.io/vertigoheel",
 	"scripts": {
 		"prepare": "husky install",
-		"pre-commit": "lint-staged"
+		"pre-commit": "lint-staged",
+		"deploy": "gh-pages -d build"
 	},
 	"author": "Ninelines Agency <info@ninelines.agency>",
 	"license": "ISC",
@@ -25,6 +27,7 @@
 		"del": "6.0.0",
 		"emitty": "1.4.0",
 		"eslint": "8.56.0",
+		"gh-pages": "6.1.1",
 		"gulp": "4.0.2",
 		"gulp-append-prepend": "1.0.9",
 		"gulp-debug": "4.0.0",
