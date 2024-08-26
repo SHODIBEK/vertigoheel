@@ -126,7 +126,7 @@
 	&__link {
 		padding: rem(10) 0;
 		font-family: var(--font-family);
-		font-weight: 700;
+		font-weight: 400;
 		font-size: rem(14);
 		line-height: 90%;
 		letter-spacing: 0.02em;
@@ -140,6 +140,10 @@
 
 		@include hover {
 			color: var(--primary-color);
+		}
+
+		@include active {
+			font-weight: 700;
 		}
 	}
 

@@ -141,6 +141,11 @@ button {
 	background: transparent;
 }
 
+.page-main {
+	margin: rem(32) 0;
+	padding: rem(32) 0;
+}
+
 .title {
 	margin: 0;
 	font-family: var(--font-family);
@@ -154,6 +159,12 @@ button {
 
 	&:not(:last-child) {
 		margin-bottom: rem(32);
+	}
+
+	&--inner {
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
 	}
 }
 

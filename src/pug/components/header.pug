@@ -8,6 +8,7 @@ header.header
         .header__navs
           each object in data.header.menu
             a.header__link(
+              class=(object.name == title) ? 'is-active' : ''
               href=object.url
             )
               != object.name
