@@ -1,0 +1,16 @@
+include ../components/hero
+section.page-main
+  .container
+    h1.title.title--inner.primary-text
+      | ДОСТУП К МАТЕРИАЛУ ОГРАНИЧЕН :(
+    p.base-text
+      | Материалы сайта предназначены исключительно для работников здравоохранения, имеющих высшее медицинское образование. 
+      br
+      | Для получения доступа, пожалуйста, войдите или зарегистрируйтесь.
+    .error__buttons
+      a.btn.btn-primary(href="./login.html")
+        span ВОЙТИ
+        +svg('arrow-right')
+      a.btn.btn-primary(href="./register.html")
+        span РЕГИСТРАЦИЯ
+        +svg('arrow-right')

@@ -1,33 +1,72 @@
 .btn {
-	&-white {
-		padding: rem(14) rem(32);
-		font-family: var(--font-family);
-		font-weight: 800;
-		font-size: rem(12);
-		line-height: 200%;
-		color: #000;
-		text-transform: uppercase;
-		border-radius: rem(56);
-		background-color: #fff;
-		border: 2px solid #fff;
-		box-shadow: inset -6px 6px 14px 0 rgba(0, 0, 0, 0.07);
-		display: inline-flex;
-		align-items: center;
-		gap: rem(16);
+	padding: rem(14) rem(32);
+	width: 100%;
+	font-family: var(--font-family);
+	font-weight: 800;
+	font-size: rem(12);
+	line-height: 200%;
+	text-transform: uppercase;
+	border-radius: rem(56);
+	box-shadow: inset -6px 6px 14px 0 rgba(0, 0, 0, 0.07);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(16);
+	transition: 0.3s ease-in-out;
+
+	svg {
+		width: rem(19);
+		height: rem(16);
+		flex-shrink: 0;
 		transition: 0.3s ease-in-out;
+	}
+
+	@include tablet {
+		width: auto;
+		justify-content: flex-start;
+	}
+
+	@include hover {
+		svg {
+			transform: translateX(5px);
+			transition: 0.3s ease-in-out;
+		}
+	}
+
+	&-primary {
+		color: #fff;
+		background-color: var(--primary-color);
+		border: 2px solid var(--primary-color);
+
+		@include hover {
+			color: var(--primary-color);
+			background-color: #fff;
+
+			svg {
+				fill: var(--primary-color);
+			}
+		}
 
 		svg {
-			width: rem(19);
-			height: rem(16);
-			flex-shrink: 0;
+			fill: #fff;
+		}
+	}
+
+	&-white {
+		color: #000;
+		background-color: #fff;
+		border: 2px solid #fff;
+
+		svg {
 			fill: var(--primary-color);
-			transition: 0.3s ease-in-out;
 		}
 
 		@include hover {
+			color: #fff;
+			background-color: var(--primary-color);
+
 			svg {
-				transform: translateX(5px);
-				transition: 0.3s ease-in-out;
+				fill: #fff;
 			}
 		}
 	}

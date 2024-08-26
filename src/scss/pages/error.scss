@@ -1,0 +1,9 @@
+.error {
+	&__buttons {
+		margin-top: rem(32);
+		gap: rem(16);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+}
