@@ -1,0 +1,9 @@
+mixin button(type, text, typeButton, url)
+  if(type == 'a')
+    a.btn.btn-primary(href=`./${url}.html`)&attributes(attributes)
+      span!=text
+      +svg('arrow-right')
+  if(type == 'button')
+    button.btn.btn-primary(type!=typeButton)&attributes(attributes)
+      span!=text
+      +svg('arrow-right')

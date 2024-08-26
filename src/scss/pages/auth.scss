@@ -1,0 +1,17 @@
+.login-page {
+	&__link {
+		display: inline-block;
+		margin-right: rem(32);
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: rem(16);
+		line-height: 162%;
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		color: var(--primary-color);
+
+		@include hover {
+			text-decoration: transparent;
+		}
+	}
+}

@@ -146,6 +146,34 @@ button {
 	padding: rem(32) 0;
 }
 
+.main-group {
+	&:not(:last-child) {
+		margin-bottom: rem(24);
+	}
+}
+
+.main-input {
+	padding: rem(11) rem(32);
+	width: 100%;
+	min-height: rem(50);
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: rem(16);
+	line-height: 162%;
+	color: var(--midnight-color);
+	border-radius: rem(32);
+	border: 1px solid #00874b;
+	background-color: #fff;
+
+	&::placeholder {
+		color: rgba(58, 58, 64, 0.32);
+	}
+
+	&:focus-visible {
+		outline-color: var(--midnight-color);
+	}
+}
+
 .title {
 	margin: 0;
 	font-family: var(--font-family);

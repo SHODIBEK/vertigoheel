@@ -1,0 +1,19 @@
+include ../components/hero
+section.page-main
+  .container
+    h1.title.primary-text
+      | ВХОД В ЛИЧНЫЙ КАБИНЕТ
+    form.login-page(action="/" method="POST") 
+      .login-page__row.row
+        .col-12.col-md-6
+          .main-group
+            input.main-input(type="email" name="email" placeholder="E-mail*" required)
+          .main-group
+            input.main-input(type="password" name="password" placeholder="Пароль")
+          .main-group
+            a.login-page__link(href="./forgot.html")
+              | Забыли пароль?
+            a.login-page__link(href="./register.html")
+              | Зарегистрироваться
+        .col-12
+          +button('button', 'ВОЙТИ', "submit")

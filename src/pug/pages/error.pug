@@ -8,9 +8,5 @@ section.page-main
       br
       | Для получения доступа, пожалуйста, войдите или зарегистрируйтесь.
     .error__buttons
-      a.btn.btn-primary(href="./login.html")
-        span ВОЙТИ
-        +svg('arrow-right')
-      a.btn.btn-primary(href="./register.html")
-        span РЕГИСТРАЦИЯ
-        +svg('arrow-right')
+      +button('a', 'ВОЙТИ', null, 'login')
+      +button('a', 'РЕГИСТРАЦИЯ', null, 'register')
