@@ -5,6 +5,97 @@ let path = require("path");
 let del = require("del");
 let webpackConfig = require("./webpack.config");
 let sass = require("gulp-sass")(require("node-sass"));
+const fs = require("fs");
+const pug = require("gulp-pug");
+
+const pagesDir = path.join(__dirname, "src");
+const outputDir = path.join(__dirname, "src");
+
+function generateIndex(done) {
+	// Читаем все файлы в папке
+	fs.readdir(pagesDir, (err, files) => {
+		if (err) {
+			console.error("Ошибка чтения папки:", err);
+			done(err);
+			return;
+		}
+
+		// Фильтруем файлы, оставляем только .pug файлы, исключая index.pug
+		const pages = files.filter(
+			(file) => path.extname(file) === ".pug" && file !== "index.pug"
+		);
+
+		// Получаем список объектов страниц с именем и title
+		const pageTitles = pages.map((page) => {
+			const filePath = path.join(pagesDir, page);
+			const fileContent = fs.readFileSync(filePath, "utf8");
+
+			// Ищем строку с title в Pug файле
+			const titleMatch = fileContent.match(/title\s+(.*)/);
+			const title = titleMatch
+				? titleMatch[1].trim()
+				: page.replace(".pug", "");
+
+			return {
+				file: page,
+				title: title,
+			};
+		});
+
+		// Генерируем pug код для списка страниц без знака равенства
+		const pugTemplate = `
+extends pug/base
+
+prepend vars
+    //-
+
+append vars
+    - title = 'ЛИЧНЫЙ КАБИНЕТ'
+    - meta.description = 'Описание страницы'
+    - meta.viewport = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover'
+    - meta.formatDetection = 'telephone=no'
+    - meta.themeColor = '#008549'
+    - defaultLink = 'javascript:void(0);'
+
+block content
+    include pug/data
+
+    .site
+        // Header Section
+        include pug/components/header
+
+        // Main Section
+        main.main
+            .container
+                .page-main
+                    h1 Список страниц
+                    ul
+                        ${pageTitles
+							.map(
+								(page) =>
+									`li: a(href='./${page.file.replace(
+										".pug",
+										".html"
+									)}') ${page.title}`
+							)
+							.join("\n                    ")}
+
+        // Footer Section
+        include pug/components/footer
+`;
+
+		// Записываем сгенерированный Pug код в файл index.pug
+		fs.writeFile(path.join(outputDir, "index.pug"), pugTemplate, (err) => {
+			if (err) {
+				console.error("Ошибка записи файла:", err);
+				done(err);
+			} else {
+				console.log("index.pug успешно сгенерирован.");
+				done();
+			}
+		});
+	});
+}
 
 let emittyPug;
 let errorHandler;
@@ -107,6 +198,8 @@ function svgoConfig(minify = argv.minifySvg) {
 		};
 	};
 }
+
+gulp.task("generateIndex", generateIndex);
 
 gulp.task("copy", () => {
 	return gulp
@@ -421,6 +514,8 @@ gulp.task("watch", () => {
 		global.emittyPugChangedFile = event === "unlink" ? undefined : file;
 	});
 
+	gulp.watch("src/pages/*.pug", gulp.series("generateIndex", "pug"));
+
 	gulp.watch("src/scss/**/*.scss", gulp.series("scss"));
 
 	gulp.watch("src/js/**/*.js", gulp.series("js"));
@@ -512,6 +607,7 @@ gulp.task(
 	"build",
 	gulp.series(
 		"copy",
+		"generateIndex",
 		"pug",
 		"share",
 		"robots",
@@ -519,4 +615,7 @@ gulp.task(
 	)
 );
 
-gulp.task("default", gulp.series("build", gulp.parallel("watch", "serve")));
+gulp.task(
+	"default",
+	gulp.series("generateIndex", "build", gulp.parallel("watch", "serve"))
+);

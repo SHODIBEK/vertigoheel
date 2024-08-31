@@ -118,6 +118,74 @@
 			],
 		},
 
+		register: {
+			inputs: [
+				{
+					type: 'text',
+					name: 'surname',
+					placeholder: 'Фамилия*',
+					required: true
+				},
+				{
+					type: 'email',
+					name: 'email',
+					placeholder: 'E-mail*',
+					required: true
+				},
+				{
+					type: 'text',
+					name: 'name',
+					placeholder: 'Имя*',
+					required: true
+				},
+				{
+					type: 'text',
+					name: 'city',
+					placeholder: 'Город',
+					required: false
+				},
+				{
+					type: 'text',
+					name: 'surbane',
+					placeholder: 'Отчество',
+					required: false
+				},
+				{
+					type: 'text',
+					name: 'work',
+					placeholder: 'Место работы',
+					required: false
+				},
+				{
+					type: 'text',
+					name: 'phone',
+					placeholder: 'Телефон*',
+					required: true
+				},
+				{
+					type: 'text',
+					name: 'speciality',
+					placeholder: 'Специальность',
+					required: false
+				},
+			],
+
+			checkboxes: [
+				{
+					id: 'agree',
+					name: 'agree',
+					text: 'Я даю <a href="#" target="_blank" rel="nofollow">согласие на обработку своих персональных данных</a> в соответствии <a href="#" target="_blank" rel="nofollow">с политикой обработки персональных данных ООО «Кофактор».</a>',
+					checked: true
+				},
+				{
+					id: 'adv',
+					name: 'agreeAdv',
+					text: 'Я даю согласие на получение рекламных материалов.',
+					checked: false
+				},
+			],
+		},
+
 		footer: {
 			menu: [
 				{

@@ -1,0 +1,17 @@
+mixin baseInput(input, type)
+  if(type == "text")
+    input.main-input(
+      type!=input.type
+      name!=input.name
+      placeholder!=input.placeholder
+      required=(input.required ? true : false)
+    )&attributes(attributes)
+  if(type == 'checkbox')
+    .main-checkbox&attributes(attributes)
+      input.main-checkbox__input(
+        id!=input.id
+        type="checkbox"
+        name!=input.name
+        checked=(input.checked ? true : false)
+      )
+      label.main-checkbox__label(for!=input.id)!=input.text

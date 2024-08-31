@@ -15,3 +15,32 @@
 		}
 	}
 }
+
+.register {
+	&-form {
+		&__row {
+			--gutter-x: 24px;
+			--gutter-y: 24px;
+
+			&:not(:last-child) {
+				margin-bottom: rem(32);
+			}
+		}
+
+		&__block {
+			padding: rem(32) rem(16);
+			border-radius: rem(16);
+			background-color: #fff;
+			box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.06);
+
+			&:not(:last-child) {
+				margin-bottom: rem(32);
+			}
+
+			@include tablet {
+				padding: rem(64) rem(32);
+				border-radius: rem(32);
+			}
+		}
+	}
+}

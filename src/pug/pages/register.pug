@@ -1,0 +1,28 @@
+include ../components/hero
+section.page-main
+  .container
+    h1.title.title--inner.primary-text
+      | РЕГИСТРАЦИЯ
+    p.base-text
+      | Чтобы принять участие в проекте заполните, пожалуйста, форму:
+    form.register-form(action="/" method="POST")
+      h3.h3
+        | Данные пользователя
+      .register-form__row.row
+        each input in data.register.inputs
+          .col-12.col-md-6
+            .main-group
+              +baseInput(input, 'text')
+        .col-12
+          p.base-text
+            | Поля, отмеченные *, являются обязательными.
+      .register-form__block
+        each checkboxItem in data.register.checkboxes
+          +baseInput(checkboxItem, 'checkbox')
+
+        p.base-text
+          | Нажимая кнопку «Продолжить» вы подтверждаете, что ознакомлены и согласны с условиями&nbsp;
+          a(href="#")
+            | пользовательского соглашения.
+
+      +button('button', 'ПРОДОЛЖИТЬ', "submit")

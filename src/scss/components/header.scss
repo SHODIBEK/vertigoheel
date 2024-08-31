@@ -50,6 +50,7 @@
 		line-height: 90%;
 		letter-spacing: 0.02em;
 		color: #000;
+		text-decoration: none;
 
 		&-icon {
 			width: 16px;
@@ -131,6 +132,7 @@
 		line-height: 90%;
 		letter-spacing: 0.02em;
 		color: var(--midnight-color);
+		text-decoration: none;
 
 		@include laptop {
 			padding: 0;

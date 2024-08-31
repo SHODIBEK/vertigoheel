@@ -4,12 +4,13 @@ prepend vars
   //-
 
 append vars
-  - title = 'Страница не найдена'
+  - title = 'Главная'
   - meta.description = 'Описание страницы'
   - meta.viewport = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover'
   - meta.formatDetection = 'telephone=no'
   - meta.themeColor = '#008549'
   - defaultLink = 'javascript:void(0);'
+  - home = true
 
 block content
   include pug/data
@@ -19,6 +20,6 @@ block content
     include pug/components/header
     <!-- Main Section  -->
     main.main
-      include pug/pages/404
+      include pug/pages/home
     <!-- Footer Section  -->
     include pug/components/footer
