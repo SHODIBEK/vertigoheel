@@ -1,7 +1,9 @@
-mixin heroBlock(inner, icon, title, desc)
-  section.hero(class=(home) ? 'hero--index' : '' || (inner) ? 'hero--inner' : '')
+mixin heroBlock(inner, icon, title, desc, small)
+  section.hero(class=(home ? 'hero--index' : '') +
+    (inner ? ' hero--inner' : '') +
+    (small ? ' hero--small' : ''))
     .container
-      if(!inner)
+      if !inner || (typeof small !== 'undefined' && small == false)
         .hero__wrapper
           p.hero__subtitle
             | Уважаемые коллеги, мы рады приветствовать вас на сайте проекта
