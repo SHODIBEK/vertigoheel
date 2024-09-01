@@ -16,6 +16,16 @@
 		}
 	}
 
+	&--inner {
+		padding-top: rem(100);
+		padding-bottom: rem(62);
+
+		@include laptop {
+			padding-top: rem(199);
+			padding-bottom: rem(124);
+		}
+	}
+
 	&__wrapper {
 		max-width: rem(392);
 		@include laptop {
@@ -52,6 +62,59 @@
 
 		@include laptop {
 			width: 393px;
+		}
+	}
+
+	&-block {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+
+		&__icon {
+			margin-right: rem(12);
+			width: rem(34);
+			height: rem(34);
+			flex-shrink: 0;
+
+			@include tablet {
+				width: rem(48);
+				height: rem(48);
+			}
+		}
+
+		&__title {
+			margin: 0;
+			font-family: var(--font-family);
+			font-weight: 700;
+			font-size: rem(20);
+			line-height: 100%;
+			color: #000;
+
+			@include tablet {
+				font-size: rem(24);
+			}
+		}
+	}
+
+	&__desc {
+		padding: rem(14) rem(20);
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: rem(14);
+		line-height: 100%;
+		letter-spacing: 0.02em;
+		color: #fff;
+		border-radius: rem(32);
+		display: inline-block;
+		background-color: var(--primary-color);
+
+		@include tablet {
+			padding: rem(14) rem(31);
+			font-size: rem(16);
 		}
 	}
 }

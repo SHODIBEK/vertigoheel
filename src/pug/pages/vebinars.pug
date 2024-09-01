@@ -1,0 +1,7 @@
++heroBlock(true, 'camera-green', 'Вебинары', "Вебинары с участием ведущих лидеров мнений")
+section.cases-page.cases--bg
+  .container
+    .cases-page__row.row
+      each vebinar in data.vebinars.cases
+        .col-12.col-lg-6
+          +cases(vebinar, true)

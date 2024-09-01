@@ -1,9 +1,15 @@
-mixin button(type, text, typeButton, url)
+mixin button(type, text, typeButton, url, white)
   if(type == 'a')
-    a.btn.btn-primary(href=`./${url}.html`)&attributes(attributes)
+    a.btn(
+      class=(!white) ? 'btn--primary' : 'btn-white'
+      href=`./${url}.html`
+    )&attributes(attributes)
       span!=text
       +svg('arrow-right')
   if(type == 'button')
-    button.btn.btn-primary(type!=typeButton)&attributes(attributes)
+    button.btn(
+      class=(!white) ? 'btn--primary' : 'btn-white'
+      type!=typeButton
+    )&attributes(attributes)
       span!=text
       +svg('arrow-right')

@@ -1,0 +1,15 @@
+mixin heroBlock(inner, icon, title, desc)
+  section.hero(class=(home) ? 'hero--index' : '' || (inner) ? 'hero--inner' : '')
+    .container
+      if(!inner)
+        .hero__wrapper
+          p.hero__subtitle
+            | Уважаемые коллеги, мы рады приветствовать вас на сайте проекта
+          img.hero__logo(src="./logo.svg" alt="logo" )
+          h1.hero__title
+            | посвященного дифференциальной диагностике и терапии головокружений любой этиологии.
+      else
+        .hero-block
+          img.hero-block__icon(src=`./images/icons/${icon}.svg`, alt!=title)
+          h1.hero-block__title!=title
+        p.hero__desc!=desc

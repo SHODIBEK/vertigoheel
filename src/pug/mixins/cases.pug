@@ -1,8 +1,13 @@
-mixin cases(data)
+mixin cases(data, inner)
   .cases-block
     .cases-block__header
       img.cases-block__icon(src=`${baseDir}/images/icons/${data.icon}.svg`, alt!=data.title loading="lazy")
       h3.cases-block__title!=data.title
       p.cases-block__desc!=data.desc
+      if(inner)
+        p.cases-block__subtitle!=data.subtitle
     .cases-block__footer
-      +button('a', 'ПЕРЕЙТИ', null, data.url).cases-block__button
+      if(!inner)
+        +button('a', 'ПЕРЕЙТИ', null, data.url).cases-block__button
+      else
+        +button('a', data.buttonText, null, data.url, true).cases-block__button

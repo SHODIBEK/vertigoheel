@@ -83,8 +83,34 @@
 			}
 		}
 
+		&__subtitle {
+			margin: 0;
+			font-size: 16px;
+			line-height: 150%;
+			color: #000;
+
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+		}
+
 		&__footer {
 			margin-top: auto;
+		}
+	}
+
+	&-page {
+		margin-top: rem(-30);
+		margin-bottom: rem(32);
+		padding: rem(50) 0;
+		border-radius: rem(32);
+		position: relative;
+		z-index: 1;
+
+		@include laptop {
+			margin-top: rem(-60);
+			padding: rem(64) 0;
+			border-radius: rem(64);
 		}
 	}
 }
