@@ -1,0 +1,38 @@
++heroBlock(true, 'camera-green', 'Вебинары', "Вебинары с участием ведущих лидеров мнений")
+section.cases-inner
+  .container
+    h3.h3.cases-inner__title
+      | На приеме пациент с головокружением: программа действий
+    .cases-inner__frame.base-mb
+      div(style='padding:52.73% 0 0 0;position:relative;')
+        iframe(src='https://player.vimeo.com/video/888755309?title=0&byline=0&portrait=0' frameborder='0' allow='autoplay; fullscreen; picture-in-picture' webkitallowfullscreen mozallowfullscreen allowfullscreen)
+      script(src='https://player.vimeo.com/api/player.js')
+    .cases-inner__author.author.base-mb
+      .author__block
+        img.author__image(src="./images/content/avatar-1.jpg" alt="Гусева Александра Леонидовна")
+        .author__content
+          h2.author__name
+            | Гусева Александра Леонидовна
+          p.author__desc
+            | д.м.н., врач отоневролог, доцент кафедры оториноларингологии лечебного факультета ГБОУ ВПО РНИМУ им. Н.И. Пирогова Минздрава России.
+    .cases-inner__content.base-mb
+      p.base-text
+        | Вы когда-нибудь испытывали головокружение и не знали, что с этим делать? Присоединяйтесь к нашему вебинару, где мы подробно рассмотрим этот важный и часто игнорируемый симптом.
+        br
+        br
+        strong Что вас ожидает:
+        br
+        | - Обзор распространённых причин головокружения
+        br
+        | - Как правильно диагностировать головокружение
+        br
+        | - Эффективные методы лечения и профилактики
+        br
+        | - Вопросы и ответы: Ответим на все ваши вопросы
+
+section.cases-page.cases--bg
+  .container
+    .cases-page__row.row
+      each vebinar in data.vebinars.cases
+        .col-12.col-lg-6
+          +cases(vebinar, true)

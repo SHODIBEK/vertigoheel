@@ -188,6 +188,10 @@ button {
 	}
 }
 
+.base-mb:not(:last-child) {
+	margin-bottom: rem(32);
+}
+
 .base-text {
 	margin: 0;
 	font-family: var(--font-family);
