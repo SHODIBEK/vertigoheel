@@ -1,0 +1,7 @@
++heroBlock(true, 'audio-green', 'Подкасты', "Короткие видеоролики по проблематике от специалистов в формате «вопрос-ответ», не более 5 минут")
+section.cases-page.cases--bg
+  .container
+    .cases-page__row.row
+      each vebinar in data.podcasts.cases
+        .col-12.col-lg-4
+          +cases(vebinar, true)
