@@ -167,4 +167,61 @@
 			box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.06);
 		}
 	}
+
+	&-announce {
+		padding: rem(32);
+		color: #fff;
+		border-radius: rem(16);
+
+		@include laptop {
+			padding: rem(195) rem(64) rem(64);
+			border-radius: rem(32);
+		}
+
+		&__header {
+			&:not(:last-child) {
+				margin-bottom: rem(32);
+
+				@include laptop {
+					margin-bottom: rem(64);
+				}
+			}
+		}
+
+		&__date {
+			margin: 0;
+			font-weight: 800;
+			font-size: rem(28);
+			line-height: 130%;
+			color: #fafafa;
+
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+
+			@include laptop {
+				font-size: rem(48);
+			}
+		}
+
+		&__theme {
+			margin: 0;
+			font-size: rem(16);
+			line-height: 150%;
+
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+		}
+
+		&__body {
+			&:not(:last-child) {
+				margin-bottom: rem(32);
+
+				@include laptop {
+					margin-bottom: rem(64);
+				}
+			}
+		}
+	}
 }
