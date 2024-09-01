@@ -50,7 +50,7 @@ prepend vars
     //-
 
 append vars
-    - title = 'ЛИЧНЫЙ КАБИНЕТ'
+    - title = 'Список страниц'
     - meta.description = 'Описание страницы'
     - meta.viewport = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover'
     - meta.formatDetection = 'telephone=no'

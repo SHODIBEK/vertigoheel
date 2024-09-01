@@ -1,0 +1,60 @@
+include ../components/hero
+section.page-main.page-main--pbn
+  .personal-main
+    .container
+      h1.title.title--inner.primary-text
+        | ЛИЧНЫЙ КАБИНЕТ
+      p.base-text
+        | Данные пользователя и сертификат
+      form.register-form(action="/" method="POST")
+        h3.h3
+          | Данные пользователя
+        .register-form__row.row
+          each input in data.personal.inputs
+            .col-12.col-md-6
+              .main-group
+                +baseInput(input, 'text')
+          .col-12
+            +button('button', 'РЕДАКТИРОВАТЬ', "submit")
+  .personal-history.cases--bg
+    .container
+      h3.h3.personal-history__title
+        | История просмотра
+      ul.personal-history__items.history
+        each history in data.personal.stories
+          li.history__item
+            .history__block
+              .history__category!=history.category
+              .history__text
+                .history__title!=history.title
+                .history__desc!=history.desc
+              .history__count!=history.count
+            a.history__button.btn.btn-white(href=`#`)
+              span!=history.buttonText
+              +svg('arrow-right')
+
+  .personal-sertificate
+    .container
+      .personal-sertificate__row.row
+        .col-12.col-lg-8
+          h3.personal-sertificate__title.title
+            | ВАШ СЕРТИФИКАТ
+          p.base-text
+            | По итогам обучающего проекта 
+            strong «Жизнь без головокружения» 
+            | вы сможете получить международный сертификат от 
+            strong Royal AustralasianCollege of Physicians (RACP).&nbsp;
+            | Для этого необходимо изучать материалы курса и зарабатывать баллы.
+          .sertificate-status
+            .sertificate-status__title
+              | Прогресс:&nbsp;
+              strong 60% (11 Хель-монет)
+            .sertificate-status__progressbar
+              -for(var i = 0; i < 10; i++) {
+                .sertificate-status__progress(class=(i < 6) ? 'is-active' : '')
+              - }
+            a.sertificate-status__button.btn(href="#")
+              span СКАЧАТЬ СЕРТИФИКАТ
+              +svg('arrow-right')
+        .col-12.col-lg-4.hidden.hidden-lg-block
+          img.personal-sertificate__image(src="./images/icons/paper-2.png" alt="paper" loading="lazy")

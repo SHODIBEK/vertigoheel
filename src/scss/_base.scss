@@ -147,6 +147,10 @@ button {
 .page-main {
 	margin: rem(32) 0;
 	padding: rem(32) 0;
+
+	&--pbn {
+		padding-bottom: 0;
+	}
 }
 
 .title {
@@ -190,7 +194,6 @@ button {
 	font-weight: 500;
 	font-size: rem(16);
 	line-height: 150%;
-	color: #000;
 
 	&:not(:last-child) {
 		margin-bottom: rem(32);
@@ -250,4 +253,14 @@ button {
 
 .primary-text {
 	color: var(--primary-color) !important;
+}
+
+.hidden {
+	display: none !important;
+}
+
+@include laptop {
+	.hidden-lg-block {
+		display: block !important;
+	}
 }

@@ -5,7 +5,7 @@ prepend vars
     //-
 
 append vars
-    - title = 'ЛИЧНЫЙ КАБИНЕТ'
+    - title = 'Список страниц'
     - meta.description = 'Описание страницы'
     - meta.viewport = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover'
     - meta.formatDetection = 'telephone=no'
@@ -29,6 +29,7 @@ block content
                     li: a(href='./error.html') = 'Error'
                     li: a(href='./home.html') = 'Главная'
                     li: a(href='./login.html') = 'ЛИЧНЫЙ КАБИНЕТ'
+                    li: a(href='./register.html') = 'Регистрация'
 
         // Footer Section
         include pug/components/footer
