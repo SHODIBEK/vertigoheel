@@ -1,0 +1,38 @@
++heroBlock(true, 'person-green', 'Клинические случаи', "Интерактивные клинические случаи с задачами с контрольными вопросами и обоснованиями, <br> которые помогают лучше разобраться в теме и выбрать тактику лечения.", true)
+section.cases-inner
+  .container
+    h3.h3.cases-inner__title
+      | Пациент с ДППГ
+    .cases-inner__frame.base-mb
+      .cases-announce.cases--bg
+        .cases-announce__header
+          h3.cases-announce__date
+            | Пациент с ДППГ
+          p.cases-announce__theme
+            | Пациент 62 года
+        .cases-announce__body
+          strong Автор: 
+          | Воронов Виктор Алексеевич
+        +button('a', 'НАЧАТЬ', null, 'cases', true)
+    .cases-inner__author.author.base-mb
+      .author__block
+        img.author__image(src="./images/content/avatar-3.jpg" alt="Воронов Виктор Алексеевич")
+        .author__content
+          h2.author__name
+            | Воронов Виктор Алексеевич
+          p.author__desc
+            | Регалии автора
+    .cases-inner__content.base-mb
+      p.base-text
+        strong Описание:
+        br
+        | Пациент с доброкачественным пароксизмальным позиционным головокружением (ДППГ).
+        br
+        | Пациент 62 года, обратился в clinic с жалобами на внезапные эпизоды головокружения, возникающие при перевороте в постели и при подъеме с сидячего положения. Симптомы сопровождаются ощущением вращения окружающих предметов и неустойчивостью...
+
+section.cases-page.cases--bg
+  .container
+    .cases-page__row.row
+      each cases in data.casses.cases
+        .col-12.col-lg-4
+          +cases(cases, true)

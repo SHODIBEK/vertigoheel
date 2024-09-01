@@ -1,0 +1,7 @@
++heroBlock(true, 'puzzle-green', 'Квизы', "Интерактивные квизы для проверки и закрепления знаний по изученным темам")
+section.cases-page.cases--bg
+  .container
+    .cases-page__row.row
+      each quize in data.quizes.cases
+        .col-12.col-lg-4
+          +cases(quize, true)

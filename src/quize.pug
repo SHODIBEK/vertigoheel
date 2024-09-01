@@ -1,0 +1,24 @@
+extends pug/base
+
+prepend vars
+  //-
+
+append vars
+  - title = 'Квизы'
+  - meta.description = 'Описание страницы'
+  - meta.viewport = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover'
+  - meta.formatDetection = 'telephone=no'
+  - meta.themeColor = '#008549'
+  - defaultLink = 'javascript:void(0);'
+
+block content
+  include pug/data
+
+  .site
+    <!-- Header Section  -->
+    include pug/components/header
+    <!-- Main Section  -->
+    main.main
+      include pug/pages/quize
+    <!-- Footer Section  -->
+    include pug/components/footer
