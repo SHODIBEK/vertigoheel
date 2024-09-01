@@ -1,14 +1,14 @@
 mixin button(type, text, typeButton, url, white)
   if(type == 'a')
     a.btn(
-      class=(!white) ? 'btn--primary' : 'btn-white'
+      class=(!white) ? 'btn-primary' : 'btn-white'
       href=`./${url}.html`
     )&attributes(attributes)
       span!=text
       +svg('arrow-right')
   if(type == 'button')
     button.btn(
-      class=(!white) ? 'btn--primary' : 'btn-white'
+      class=(!white) ? 'btn-primary' : 'btn-white'
       type!=typeButton
     )&attributes(attributes)
       span!=text

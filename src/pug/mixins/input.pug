@@ -15,3 +15,12 @@ mixin baseInput(input, type)
         checked=(input.checked ? true : false)
       )
       label.main-checkbox__label(for!=input.id)!=input.text
+  if(type == "radio")
+    .main-checkbox&attributes(attributes)
+      input.main-checkbox__input(
+        id!=input.id
+        type="radio"
+        name!=input.name
+        checked=(input.checked ? true : false)
+      )
+      label.main-checkbox__label(for!=input.id)!=input.text

@@ -132,7 +132,6 @@
 			position: relative;
 			display: block;
 			width: 100%;
-			max-height: 631px;
 			border-radius: rem(16);
 			overflow: hidden;
 
@@ -220,6 +219,96 @@
 
 				@include laptop {
 					margin-bottom: rem(64);
+				}
+			}
+		}
+	}
+
+	&-quize {
+		padding: rem(32);
+		color: #fff;
+		border-radius: rem(16);
+
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+
+		@include laptop {
+			padding: rem(64);
+			min-height: 631px;
+			border-radius: rem(32);
+		}
+
+		&__question {
+			margin: 0;
+			font-family: var(--font-family);
+			font-weight: 700;
+			font-size: rem(16);
+			line-height: 120%;
+
+			&:not(:last-child) {
+				margin-bottom: rem(32);
+			}
+
+			@include tablet {
+				font-size: rem(24);
+
+				&:not(:last-child) {
+					margin-bottom: rem(98);
+				}
+			}
+		}
+
+		&__input {
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+
+				@include tablet {
+					margin-bottom: rem(32);
+				}
+			}
+
+			.main-checkbox__label {
+				color: #fff;
+			}
+		}
+
+		&__button {
+			display: flex;
+			justify-content: center;
+		}
+
+		&__reward {
+			display: flex;
+			align-items: center;
+
+			&-title,
+			&-count {
+				margin: 0;
+				font-weight: 700;
+				font-size: rem(16);
+				line-height: 150%;
+				color: var(--primary-color);
+			}
+
+			&-title {
+				margin-right: rem(16);
+			}
+
+			&-block {
+				display: flex;
+				align-items: center;
+			}
+
+			&-icon {
+				margin-right: rem(10);
+				width: rem(25);
+				height: rem(28);
+				flex-shrink: 0;
+
+				@include tablet {
+					width: rem(35);
+					height: rem(38);
 				}
 			}
 		}

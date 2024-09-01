@@ -1,0 +1,34 @@
++heroBlock(true, 'puzzle-green', 'Квизы', "Интерактивные квизы для проверки и закрепления знаний по изученным темам", true)
+section.cases-inner
+  .container
+    h3.h3.cases-inner__title
+      | Диагностический поиск при головокружении (функциональные тесты, пробы)
+    .cases-inner__frame.base-mb
+      .cases-quize.cases--bg
+        .cases-quize__question
+          | Что из перечисленного является классическим функциональным тестом для оценки вестибулярной функции при головокружении?
+        .cases-quize__answer
+          each input in data.quizes.answers
+            +baseInput(input, 'radio').cases-quize__input
+      .cases-quize__button
+        +button('button', 'ПРОДОЛЖИТЬ', "button", null)
+    .cases-inner__content.base-mb
+      p.base-text
+        strong Описание:
+        br
+        | Этот квиз предназначен для оценки знаний о диагностических методах и функциональных тестах, используемых для выявления причин головокружения. Участникам предлагается рассмотреть различные аспекты диагностики, включая специфические пробы и тесты, направленные на определение источника головокружения.
+      hr.base-hr
+      .cases-quize__reward
+        .cases-quize__reward-title
+          | Вознаграждение:
+        .cases-quize__reward-block
+          +svg('reward').cases-quize__reward-icon
+          span.cases-quize__reward-count
+            | 1 ХЕЛЬ
+
+section.cases-page.cases--bg
+  .container
+    .cases-page__row.row
+      each cases in data.quizes.cases
+        .col-12.col-lg-4
+          +cases(cases, true)
