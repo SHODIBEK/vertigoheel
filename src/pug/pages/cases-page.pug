@@ -1,0 +1,7 @@
++heroBlock(true, 'person-green', 'Клинические случаи', "Интерактивные клинические случаи с задачами с контрольными вопросами и обоснованиями, <br> которые помогают лучше разобраться в теме и выбрать тактику лечения.")
+section.cases-page.cases--bg
+  .container
+    .cases-page__row.row
+      each cases in data.casses.cases
+        .col-12.col-lg-4
+          +cases(cases, true)
