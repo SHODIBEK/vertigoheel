@@ -1,7 +1,7 @@
 .hero {
 	position: relative;
 	padding: rem(150) 0 rem(32);
-	background: url("../images/content/hero-bg.png") no-repeat top center /
+	background: url("../images/content/hero-bg.webp") no-repeat top center /
 		cover;
 
 	@include laptop {

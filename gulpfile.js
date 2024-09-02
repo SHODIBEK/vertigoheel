@@ -6,7 +6,6 @@ let del = require("del");
 let webpackConfig = require("./webpack.config");
 let sass = require("gulp-sass")(require("node-sass"));
 const fs = require("fs");
-const pug = require("gulp-pug");
 
 const pagesDir = path.join(__dirname, "src");
 const outputDir = path.join(__dirname, "src");
@@ -105,8 +104,8 @@ let argv = yargs.default({
 	debug: false,
 	fix: false,
 	minifyHtml: null,
-	minifyCss: null,
-	minifyJs: null,
+	minifyCss: true,
+	minifyJs: true,
 	minifySvg: null,
 	notify: true,
 	open: true,

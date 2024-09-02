@@ -1,11 +1,11 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-
-	entry: './src/js/main.js',
+	mode: "production",
+	entry: "./src/js/main.js",
 	output: {
-		path: path.resolve(__dirname, 'build/js'),
-		filename: '[name].js',
+		path: path.resolve(__dirname, "build/js"),
+		filename: "[name].js",
 	},
 	module: {
 		rules: [
@@ -13,7 +13,7 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /node_modules|bower_components/,
 				use: {
-					loader: 'babel-loader',
+					loader: "babel-loader",
 				},
 			},
 		],
@@ -22,13 +22,13 @@ module.exports = {
 		splitChunks: {
 			cacheGroups: {
 				vendor: {
-					chunks: 'initial',
+					chunks: "initial",
 					test: /node_modules|bower_components/,
-					name: 'vendor',
+					name: "vendor",
 					enforce: true,
 				},
 			},
 		},
 	},
-	devtool: 'source-map',
+	devtool: "source-map",
 };
