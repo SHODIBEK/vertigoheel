@@ -110,10 +110,6 @@ block vars
 			maskIcon: {
 				href: null,
 				color: null
-			},
-			preload: {
-				href: null,
-				as: null
 			}
 		}
 
@@ -279,14 +275,13 @@ html(class=html.classList)&attributes(html.attrs)
 				link(rel="manifest" href!=link.manifest)
 			if link.maskIcon.href !== null
 				link(rel="mask-icon" href!=link.maskIcon.href color=link.maskIcon.color)
-			if link.preload !== null
-				link(rel='preload' href!=link.preload.href as!=link.preload.as)
 		block styles
 			<!-- Styles Section  -->
+			link(rel='icon' type='image/svg+xml' href='./images/favicon.svg')
+			link(rel='icon' type='image/png' href='./images/favicon.png')
 			link(rel='preload' fetchpriority='high' as='style' href!=`${baseDir}css/main.css?v=${Date.now()}` )
 			link(rel='preload' fetchpriority='high' as='script' href!=`${baseDir}js/vendor.js?v=${Date.now()}` )
 			link(rel='preload' fetchpriority='high' as='script' href!=`${baseDir}js/main.js?v=${Date.now()}` )
-			link(rel='preload' fetchpriority='high' as='image' href!=`${baseDir}images/content/hero-bg.webp` type='image/webp')
 			link(rel='preconnect' href='https://fonts.googleapis.com')
 			link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
 			link(href='https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap' rel='stylesheet')
