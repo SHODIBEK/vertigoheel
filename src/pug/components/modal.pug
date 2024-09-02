@@ -1,25 +1,17 @@
-#modal-1.modal(aria-hidden='true')
+#modal-1.modal.micromodal-slide(
+  class=(modalOpen) ? 'is-open' : ''
+  aria-hidden=(modalOpen) ? 'false' : 'true'
+)
   .modal__overlay(tabindex='-1' data-modal-close)
     .modal__container(role='dialog' aria-modal='true')
       button.modal__close(aria-label='Close modal' data-modal-close)
       .modal__header
         h2.modal__title
-          | Приглашаем к сотрудничесву IT
+          | ВХОД ДЛЯ СПЕЦИАЛИСТОВ
         p.modal__subtitle
-          | Идейные соображения высшего порядка, а также сложившаяся структура организации требуют определения.
-      .modal__content
-        form.modal__form.js-form-validate(action="/")
-          .modal__form-groups
-            input(type="text" name="name" placeholder="Как вас зовут?").page-input
-            input(type="text" name="profession" placeholder="Род деятельности").page-input
-            input(type="email" name="email" placeholder="Email").page-input
-            input(type="text" name="phone" placeholder="Телефон").page-input.js-phone-mask
-            textarea(name="message" placeholder="Ваше сообщение").page-textarea
-          .modal__form-footer
-            button.btn.btn-primary.js-button-animation(type="submit")
-              | Отправить
-              span
-            .modal__form-checkboxes
-              input#agree.visually-hidden(type="checkbox" name="agree" checked)
-              label(for="agree").form__checkbox
-                | Я согласен на обработку персональных данных
+          | Информация в данном разделе предназначена исключительно для медицинских работников. 
+          br
+          | Вы являетесь медицинским работником?
+      .modal__footer
+        +button('button', 'ДА', "button", null, true)(data-modal-close)
+        +button('button', 'Нет', "button", null, true)

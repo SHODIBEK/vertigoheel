@@ -1,0 +1,7 @@
++heroBlock(true, 'checklist-green', 'Статьи', "Краткие обзоры исследований и новостей")
+section.cases-page.cases--bg
+  .container
+    .cases-page__row.row
+      each cases in data.blogs.cases
+        .col-12.col-lg-4
+          +cases(cases, false)

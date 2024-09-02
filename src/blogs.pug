@@ -4,7 +4,7 @@ prepend vars
   //-
 
 append vars
-  - title = 'Вебинары'
+  - title = 'Статьи'
   - meta.description = 'Описание страницы'
   - meta.viewport = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover'
   - meta.formatDetection = 'telephone=no'
@@ -19,8 +19,6 @@ block content
     include pug/components/header
     <!-- Main Section  -->
     main.main
-      include pug/pages/vebinars
+      include pug/pages/blogs
     <!-- Footer Section  -->
     include pug/components/footer
-
-  include pug/components/modal
